@@ -144,11 +144,8 @@ Halaman untuk mencari dan melihat informasi status pengiriman berdasarkan Nomor 
 
 ![Tracking Pengiriman](Screenshot/ss5.png)
 
-### 6. Hasil Akhir Aplikasi
-
-Dokumentasi tampilan akhir aplikasi RuangBaca setelah fitur-fitur utama selesai dikembangkan.
-
-![Hasil Akhir Aplikasi](Screenshot/ss6.png)
+### 6. LINK Vidio YouTube
+https://youtu.be/KlBA7JxDw-o
 
 ## 9. Penutup
 
