@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - RuangBaca</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/data.js" defer></script>
+    <script src="js/stok.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RuangBaca</h2>
+        <div>
+            <a href="dashboard.html" class="back-link">Dashboard</a>
+        </div>
+    </header>
+
+    <main class="stok-container">
+
+        <section class="stok-header">
+            <h1>Katalog dan Stok Buku</h1>
+            <p>Daftar buku yang tersedia di RuangBaca.</p>
+        </section>
+
+        <section class="form-stok">
+            <h2>Tambah Buku Baru</h2>
+
+            <form id="formStok">
+
+                <div class="form-grid">
+                    <div>
+                        <label for="kodeBarang">Kode Barang</label>
+                        <input type="text" id="kodeBarang" required>
+                    </div>
+
+                    <div>
+                        <label for="namaBarang">Nama Buku</label>
+                        <input type="text" id="namaBarang" required>
+                    </div>
+
+                    <div>
+                        <label for="jenisBarang">Jenis Buku</label>
+                        <input type="text" id="jenisBarang" value="Buku Ajar" required>
+                    </div>
+
+                    <div>
+                        <label for="edisi">Edisi</label>
+                        <input type="number" id="edisi" min="1" required>
+                    </div>
+
+                    <div>
+                        <label for="stok">Jumlah Stok</label>
+                        <input type="number" id="stok" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="harga">Harga</label>
+                        <input type="text" id="harga" placeholder="Contoh: Rp 100.000" required>
+                    </div>
+
+                    <div class="full-width">
+                        <label for="cover">Nama File Cover</label>
+                        <input type="text" id="cover" placeholder="Contoh: img/buku_baru.jpg" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Tambahkan Buku
+                </button>
+
+            </form>
+        </section>
+
+        <section class="katalog-section">
+            <h2>Daftar Katalog Buku</h2>
+
+            <div id="daftarBuku" class="katalog-grid">
+                <!-- Data buku ditampilkan menggunakan JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

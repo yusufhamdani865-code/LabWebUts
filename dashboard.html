@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RuangBaca</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RuangBaca</h2>
+
+        <div>
+            <span id="namaNavbar">Pengguna</span>
+            <button id="btnLogout" class="btn-logout">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-box">
+            <h1 id="sapaan">Selamat Datang!</h1>
+            <p>Selamat datang di sistem toko buku online RuangBaca.</p>
+        </section>
+
+        <section class="dashboard-menu">
+            <h2>Menu Utama</h2>
+
+            <div class="menu-grid">
+
+                <a href="stok.html" class="menu-card">
+                    <h3>Katalog dan Stok Buku</h3>
+                    <p>Lihat informasi dan persediaan buku.</p>
+                </a>
+
+                <a href="checkout.html" class="menu-card">
+                    <h3>Checkout</h3>
+                    <p>Lakukan pemesanan buku.</p>
+                </a>
+
+                <a href="tracking.html" class="menu-card">
+                    <h3>Tracking Pengiriman</h3>
+                    <p>Lihat status pengiriman pesanan.</p>
+                </a>
+
+                <a href="#laporan" class="menu-card">
+                    <h3>Laporan Pemesanan</h3>
+                    <p>Lihat informasi laporan pemesanan.</p>
+                </a>
+
+                <a href="#history" class="menu-card">
+                    <h3>History Transaksi</h3>
+                    <p>Lihat riwayat transaksi pengguna.</p>
+                </a>
+
+            </div>
+        </section>
+
+
+<section class="info-section" id="laporan">
+    <h2>Laporan Pemesanan</h2>
+    <p>Berikut adalah daftar seluruh pemesanan buku.</p>
+
+    <div id="daftarLaporan">
+        <!-- Laporan ditampilkan melalui JavaScript -->
+    </div>
+</section>
+
+<section class="info-section" id="history">
+    <h2>History Transaksi</h2>
+    <p>Berikut adalah riwayat transaksi pengguna.</p>
+
+    <div id="daftarHistory">
+        <!-- Riwayat ditampilkan melalui JavaScript -->
+    </div>
+</section>
+
+    </main>
+
+</body>
+</html>
+

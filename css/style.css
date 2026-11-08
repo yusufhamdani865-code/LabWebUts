@@ -1,0 +1,610 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7f5;
+    color: #333;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #66856d;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #66856d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #526e59;
+}
+
+.login-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.login-links a {
+    color: #66856d;
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 12px;
+    color: #66856d;
+}
+
+.modal-content p {
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* DASHBOARD */
+
+.navbar {
+    background-color: white;
+    padding: 18px 40px;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: #66856d;
+}
+
+.navbar span {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.btn-logout {
+    padding: 9px 15px;
+    background-color: #66856d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.welcome-box {
+    background-color: #eaf1eb;
+    padding: 25px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+.welcome-box h1 {
+    color: #526e59;
+    margin-bottom: 10px;
+}
+
+.dashboard-menu h2 {
+    margin-bottom: 18px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.menu-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.menu-card h3 {
+    color: #66856d;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.menu-card:hover {
+    background-color: #f0f5f0;
+}
+
+.info-section {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.info-section h2 {
+    color: #66856d;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    color: #777777;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* HALAMAN KATALOG DAN STOK */
+
+.stok-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.stok-header {
+    margin-bottom: 25px;
+}
+
+.stok-header h1 {
+    color: #526e59;
+    margin-bottom: 8px;
+}
+
+.stok-header p {
+    color: #777;
+}
+
+.form-stok {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.form-stok h2,
+.katalog-section h2 {
+    color: #66856d;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-grid label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-grid input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.katalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.buku-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.buku-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.buku-card h3 {
+    color: #526e59;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.buku-card p {
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: #555555;
+}
+
+.buku-card .harga-buku {
+    color: #66856d;
+    font-weight: bold;
+}
+
+.back-link {
+    color: #66856d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .katalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .form-grid,
+    .katalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-stok {
+        padding: 15px;
+    }
+}
+
+
+/* HALAMAN CHECKOUT */
+.checkout-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.checkout-container h1 {
+    color: #385b49;
+    margin-bottom: 8px;
+}
+
+.checkout-section {
+    background: white;
+    padding: 22px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.checkout-section h2 {
+    color: #385b49;
+    margin-bottom: 18px;
+}
+
+.checkout-section label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.checkout-section input,
+.checkout-section textarea,
+.checkout-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.checkout-section textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.checkout-section button {
+    background: #527b65;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.checkout-section button:hover {
+    background: #385b49;
+}
+
+#totalHarga {
+    margin-top: 20px;
+    color: #385b49;
+}
+
+
+/* ===== HALAMAN TRACKING ===== */
+
+.header-tracking {
+    background-color: #dce8df;
+    color: #344b3b;
+    padding: 25px;
+    text-align: center;
+}
+
+.header-tracking h1 {
+    margin-bottom: 5px;
+}
+
+.container-tracking {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.judul-tracking {
+    margin-bottom: 25px;
+}
+
+.judul-tracking h2 {
+    color: #344b3b;
+}
+
+.kartu-tracking {
+    background: white;
+    border: 1px solid #dce8df;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.kartu-tracking p {
+    margin: 12px 0;
+    color: #555;
+}
+
+.status-tracking {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.timeline-item {
+    flex: 1;
+    color: #999;
+}
+
+.timeline-item span {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ddd;
+    margin-bottom: 8px;
+}
+
+.timeline-item.aktif {
+    color: #52765e;
+    font-weight: bold;
+}
+
+.timeline-item.aktif span {
+    background: #52765e;
+    color: white;
+}
+
+.tracking-kosong {
+    padding: 35px;
+    text-align: center;
+    background: #f4f7f4;
+    border-radius: 12px;
+}
+
+.aksi-tracking {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.aksi-tracking a {
+    text-decoration: none;
+    background: #52765e;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+}
+
+.aksi-tracking a:hover {
+    background: #3d5d48;
+}
+
+@media (max-width: 600px) {
+    .container-tracking {
+        padding: 15px;
+    }
+
+    .timeline {
+        gap: 3px;
+    }
+
+    .timeline-item p {
+        font-size: 12px;
+    }
+
+    .aksi-tracking {
+        flex-direction: column;
+    }
+}
+
+
+/* Pencarian Nomor Delivery Order */
+
+.pencarian-tracking {
+    background: #f4f7f4;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.pencarian-tracking form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pencarian-tracking input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.pencarian-tracking button {
+    padding: 12px 25px;
+    background: #52765e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.pencarian-tracking button:hover {
+    background: #3d5d48;
+}
+/* Tabel Laporan dan History */
+
+.info-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+.info-section th,
+.info-section td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.info-section th {
+    background-color: #dce8df;
+    color: #344b3b;
+}
+
+.info-section tr:nth-child(even) {
+    background-color: #f4f7f4;
+}
+
+.info-section {
+    overflow-x: auto;
+}
+

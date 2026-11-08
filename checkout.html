@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RuangBaca</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/data.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>RuangBaca</h2>
+        <a href="dashboard.html">Kembali ke Dashboard</a>
+    </nav>
+
+    <main class="checkout-container">
+        <h1>Checkout Pemesanan Buku</h1>
+        <p>Lengkapi informasi pembelian buku Anda.</p>
+
+        <section class="checkout-section">
+            <h2>Daftar Buku</h2>
+
+            <div id="daftarPesanan"></div>
+
+            <button type="button" id="tambahBuku">
+                Tambah Buku
+            </button>
+
+            <h3 id="totalHarga">Total: Rp 0</h3>
+        </section>
+
+        <form id="formCheckout">
+
+            <section class="checkout-section">
+                <h2>Data Pembeli</h2>
+
+                <label>Nama Pembeli</label>
+                <input type="text" id="namaPembeli" required>
+
+                <label>Email</label>
+                <input type="email" id="emailPembeli" required>
+
+                <label>Alamat Pengiriman</label>
+                <textarea id="alamatPembeli" required></textarea>
+
+                <label>Nomor Telepon</label>
+                <input type="tel" id="teleponPembeli" required>
+            </section>
+
+            <section class="checkout-section">
+                <h2>Informasi Pembayaran</h2>
+
+                <label>Metode Pembayaran</label>
+                <select id="metodePembayaran" required>
+                    <option value="">Pilih Pembayaran</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="E-Wallet">E-Wallet</option>
+                    <option value="COD">COD</option>
+                </select>
+
+                <button type="submit">Buat Pesanan</button>
+            </section>
+
+        </form>
+    </main>
+
+</body>
+</html>
